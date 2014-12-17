@@ -61,9 +61,9 @@ public:
 	virtual void getSummary(std::ostream & out)
 	{
 
+		out << "Testing sorters on arrays with size : " << TEST_ARRAY_SIZE << endl;
 		for (size_t i = 0; i < numberOfSorters; i++)
 		{
-
 			out << "Sorter name : " << infoKeeper[i].sorterName << endl;
 
 			for (size_t j = 0; j < NUMBER_OF_TEST_ARRAYS; j++)
@@ -92,7 +92,7 @@ private:
 
 		for (size_t i = 0; i < TEST_ARRAY_SIZE; i++)
 		{
-			randArray[i] = rand() % TEST_ARRAY_SIZE;
+			randArray[i] = rand() % 100000;
 		}
 		return randArray;
 	}

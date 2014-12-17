@@ -17,20 +17,11 @@ public:
 		clock_t start, finish;
 		start = clock();
 
-		/*
-				chrono::time_point<chrono::high_resolution_clock> startt, finisht;
-				startt = chrono::high_resolution_clock::now();
-				*/
 		size_t endPositionOfSubArray = partition(data, count);
 		sort(data, endPositionOfSubArray);
 		sort(data + endPositionOfSubArray + 1, count - endPositionOfSubArray - 1);
 
 		finish = clock();
-		/*
-				finisht = chrono::high_resolution_clock::now();
-
-				test = chrono::duration_cast<chrono::milliseconds>(finisht - startt).count();
-				*/
 		timeTaken = finish = start;
 
 
@@ -91,14 +82,12 @@ private:
 		return leftBorder;
 
 	}
-	//	unsigned long long test;
 	T& choosePivot(T* arr, size_t size)
 	{
 		size_t middle = size / 2;
 		swapif(arr[0], arr[middle]);
 		swapif(arr[0], arr[size - 1]);
 		swapif(arr[middle], arr[size - 1]);
-		// put pivot next to end of array
 		swap(arr[middle], arr[size - 2]);
 		return arr[size - 2];
 	}

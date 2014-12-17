@@ -1,6 +1,5 @@
 #pragma once
 #include <time.h>
-#include <chrono>
 #include <iostream>
 using namespace std;
 
@@ -36,4 +35,5 @@ void swapif(T& a, T& b)
 #include "QuickSorter.h"
 #include "InsertionSorter.h"
 #include "Tester.h"
+#include "HeapSorter.h"
 
